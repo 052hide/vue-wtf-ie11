@@ -1,14 +1,24 @@
 {
   "name": "vue-wtf-ie11",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "main":"dist/vue-wtf-ie11.common.js",
   "unpkg": "./dist/vue-wtf-ie11.umd.min.js",
   "jsdelivr": "./dist/vue-wtf-ie11.umd.min.js",
   "license": "MIT",
-  "author": "052hide",
+  "author": "Hidetoshi Ota (https://github.com/052hide)",
   "files": [
     "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/052hide/vue-wtf-ie11"
+  },
+  "keywords": [
+    "vue",
+    "nuxt",
+    "ie",
+    "ie11"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
