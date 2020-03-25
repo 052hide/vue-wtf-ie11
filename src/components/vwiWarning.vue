@@ -26,13 +26,19 @@ export default {
 
 <style>
 .vwi__content {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
-  background: gray;
+  height: 100%;
+  z-index: 99999;
+  opacity: 0.8;
+  background: #000;
+  color: #fff;
 }
 .vwi__msg {
   margin: 0;
