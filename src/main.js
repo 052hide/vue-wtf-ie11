@@ -1,8 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
+import vwiWarning from './components/vwiWarning.vue'
 
-Vue.config.productionTip = false
+const VueWtfIe11 = {
+  install(Vue) {
+    const components = {
+      vwiWarning,
+    }
+    for(const [name,c] of Object.entries(components)){
+        Vue.component(name,c)
+    }
+  },
+}
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+export default VueWtfIe11

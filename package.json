@@ -1,10 +1,19 @@
 {
   "name": "vue-wtf-ie11",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main":"dist/vue-wtf-ie11.common.js",
+  "unpkg": "./dist/vue-wtf-ie11.umd.min.js",
+  "jsdelivr": "./dist/vue-wtf-ie11.umd.min.js",
+  "license": "MIT",
+  "author": "052hide",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name vue-wtf-ie11 ./src/main.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
