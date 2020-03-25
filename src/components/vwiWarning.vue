@@ -1,5 +1,5 @@
 <template>
-  <div class="vwi__content">
+  <div v-if="isIE" class="vwi__content">
     <h1 class="vwi__msg">{{ msg }}</h1>
   </div>
 </template>
@@ -9,7 +9,16 @@ export default {
   name: 'vwiWarning',
   data() {
     return {
+      isIE: false,
       msg: 'IEは使えません'
+    }
+  },
+  created() {
+    if (process.env.browser) {
+      const userAgent = window.navigator.userAgent.toLowerCase()
+      if (userAgent === 'msie' || userAgent === 'trident') {
+        this.isIE = true
+      }
     }
   }
 }
