@@ -1,6 +1,6 @@
 {
   "name": "vue-wtf-ie11",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": false,
   "main":"dist/vue-wtf-ie11.common.js",
   "unpkg": "./dist/vue-wtf-ie11.umd.min.js",

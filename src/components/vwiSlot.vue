@@ -1,21 +1,30 @@
 <template>
-  <div v-if="isIE" class="vwi-warning">
-    <p class="vwi-warning__msg">{{ msg }}</p>
+  <div v-if="isIE" class="vwi-slot">
+    <div :style="styles" class="vwi-slot__content">
+      <slot />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'vwiWarning',
+  name: 'vwiSlot',
   props: {
-    msg: {
+    maxWidth: {
       type: String,
-      default: 'Your browser is not supported.'
-    },
+      default: 'none'
+    }
   },
   data() {
     return {
       isIE: false,
+    }
+  },
+  computed: {
+    styles() {
+      return {
+        '--content-max-width': this.maxWidth
+      }
     }
   },
   created() {
@@ -27,12 +36,12 @@ export default {
         }
       }
     }
-  }
+  },
 }
 </script>
 
 <style scoped>
-.vwi-warning {
+.vwi-slot {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -43,12 +52,12 @@ export default {
   width: 100%;
   height: 100%;
   z-index: 99999;
-  opacity: 0.8;
-  background: #000;
-  color: #fff;
+  background: #fff;
 }
-.vwi-warning__msg {
+.vwi-slot__content {
+  --content-max-width: none;
   margin: 0;
-  text-align: center;
+  width: 100%;
+  max-width: var(--content-max-width);
 }
 </style>

@@ -2,12 +2,23 @@
 
 ## Components
 vwiWarning
+- slot: no
+
 - props
 
 |  name  |  type   |  default  |
 | ------ | ------- | --------- |
 |  msg   |  string | Your browser is not supported. |
 
+---
+vwiWarning
+- slot: yes
+
+- props
+
+|  name     |  type   |  default  |
+| --------- | ------- | --------- |
+|  maxWidth |  string |  none     |
 
 ## Usage
 
@@ -39,10 +50,14 @@ Vue.use(VueWtfIe11)
 
 ~/*.vue
 
+
 ```html
 <template>
   <div>
-    <vwiWarning msg="IEでは使えません" />
+    <vwiWarning msg="Please use Microsoft Edge." />
+    <vwiSlot maxWidth="768px">
+      <p>Please use <a href="https://www.microsoft.com/en-us/edge/">Microsoft Edge.</a></p>
+    </vwiSlot>
   </div>
 </template>
 ```
