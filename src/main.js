@@ -5,8 +5,8 @@ const VueWtfIe11 = {
     const components = {
       vwiWarning,
     }
-    for(const [name,c] of Object.entries(components)){
-        Vue.component(name,c)
+    for(const [name, c] of Object.entries(components)) {
+        Vue.component(name, c)
     }
   },
 }

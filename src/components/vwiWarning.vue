@@ -7,10 +7,15 @@
 <script>
 export default {
   name: 'vwiWarning',
+  props: {
+    msg: {
+      type: String,
+      default: 'Your browser is not supported.'
+    },
+  },
   data() {
     return {
       isIE: false,
-      msg: 'IEは使えません'
     }
   },
   created() {

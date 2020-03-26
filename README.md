@@ -1,5 +1,14 @@
 # vue-wtf-ie11
 
+## Components
+vwiWarning
+- props
+
+|  name  |  type   |  default  |
+| ------ | ------- | --------- |
+|  msg   |  string | Your browser is not supported. |
+
+
 ## Usage
 
 ### Nuxt
@@ -33,7 +42,7 @@ Vue.use(VueWtfIe11)
 ```html
 <template>
   <div>
-    <vwiWarning />
+    <vwiWarning msg="IEでは使えません" />
   </div>
 </template>
 ```
