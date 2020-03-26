@@ -11,7 +11,7 @@ vwiWarning
 |  msg   |  string | Your browser is not supported. |
 
 ---
-vwiWarning
+vwiSlot
 - slot: yes
 
 - props
